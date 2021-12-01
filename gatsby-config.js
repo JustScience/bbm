@@ -1,22 +1,47 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const {
+  NODE_ENV,
+  URL: CLOUD_SITE_URL = 'https://badbubblemusic.com',
+  DEPLOY_PRIME_URL: CLOUD_DEPLOY_URL = CLOUD_SITE_URL,
+  CONTEXT: CLOUD_ENV = NODE_ENV
+} = process.env;
+
+const isCloudProduction = CLOUD_ENV === 'production';
+const siteUrl = isCloudProduction ? CLOUD_SITE_URL : CLOUD_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "bbm",
+    title: "Bad Bubble Music",
+    titleTemplate: ' | Bad Bubble Music',
+    description: "Bad Bubble Music.",
+    keywords: "Bad Bubble Music",
+    copyright: "Copyright 2021, Bad Bubble Music, LLC. All rights reserved.",
+    author: "J Galenti",
+    contact: "BadBubbleMusic@gmail.com",
+    siteUrl: "https://badbubblemusic.com", // No trailing slash allowed!
+    twitter: "@badbubblemusic",
   },
   plugins: [
     {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: "badbubblemusic.myshopify.com",
-        accessToken: "",
+        storeUrl: process.env.SHOPIFY_STORE_URL,
+        // shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        // accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        shopifyConnections: ["collections"],
       },
     },
+    "gatsby-optional-chaining",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-CFMM2HHHW6",
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     "gatsby-plugin-react-helmet",
