@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    background-repeat: none;
+    font-family: 'Coming Soon', 'Open Sans', sans-serif;
+}
+
+html,body {
+    background-color: black; 
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a:any-link {text-decoration:none;}
+ul {list-style:none;padding:0;}
+h1,h2,h3,h4,h5,h6,p {margin-top:0;}
