@@ -6,7 +6,7 @@ import { HeroWrap } from './style'
 export default function Hero() {
     const data = useStaticQuery(graphql`
         query HeaderQuery {
-            file(relativePath: {eq: "hero-bg.jpg"}) {
+            file(relativePath: {eq: "hero-window.jpg"}) {
                 childImageSharp {
                     gatsbyImageData
                 }

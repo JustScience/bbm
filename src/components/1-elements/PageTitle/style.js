@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import color from '../../0-theme/Color'
 
 const PageTitleWrap = styled.div`
     padding: 24px;
@@ -8,11 +9,15 @@ const PageTitleWrap = styled.div`
         margin: 0 auto;
         margin-bottom: 8px;
         padding: 0;
-        text-align: center;
+        text-align: left;
+    }
+    h1 {
+        color: ${color.primary.light};
+        font-size: 1.5em;
     }
     p {
         color: rgba(255,255,255,0.6);
-        font-size: 0.84em;
+        font-size: 0.9em;
         font-weight:300;
         max-width:480px;
     }

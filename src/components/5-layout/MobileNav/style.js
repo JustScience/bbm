@@ -15,10 +15,6 @@ const MobileNavWrap = styled.nav`
     top: 50px;
     width: 100%;
     z-index: 99999;
-
-    ${media.tabletLG`
-        display: none;
-    `};
 `
 const MobileNavHeaderWrap = styled.div`
     align-items: center;
@@ -28,6 +24,10 @@ const MobileNavHeaderWrap = styled.div`
     right: 12px;
     top: 5px;
     z-index: 99999;
+
+    ${media.tabletLG`
+        display: none;
+    `};
 `
 const MobileNavTrigger = styled.div`
     display: block;
@@ -49,13 +49,14 @@ const MobileNavItem = styled(GatsbyLink)`
     border: solid 1px transparent;
     border-radius: 12px;
     color: white;
-    font-size: 0.9em;
+    font-size: 1.5em;
     margin-bottom: 8px;
     padding: 8px 12px;
     transition: all 333ms ease-in;
 
     &:hover {
         background-color: ${color.primary.base};
+        color: ${color.accent.base};
         box-shadow: 0 4px 9px -6px ${color.shadow.base};
     }
 `

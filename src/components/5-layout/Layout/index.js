@@ -13,7 +13,7 @@ export default function Layout({ children, location, crumbLabel }) {
         <>
             <LayoutWrap>
                 <Header />
-                <HeaderSpacer />
+                {/* <HeaderSpacer /> */}
                 {/* <Breadcrumbs location={location} crumbLabel={crumbLabel} /> */}
                 <MobileNav />
                 { children }

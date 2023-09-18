@@ -13,9 +13,10 @@ export default function HeaderNav() {
     return (
         <>
             <NavWrap>
-                <NavItem to="/links" activeStyle={activeStyle}>Links</NavItem>
-                <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem>
-                <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem>
+                {/* <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem> */}
+                <NavItem to="/linktree" activeStyle={activeStyle}>Links</NavItem>
+                {/* <NavItem to="/video" activeStyle={activeStyle}>Videos</NavItem> */}
+                {/* <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem> */}
                 {/* <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem> */}
                 {/* <Cart /> */}
             </NavWrap>

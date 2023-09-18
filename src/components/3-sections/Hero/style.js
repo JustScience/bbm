@@ -5,19 +5,22 @@ import media from '../../0-theme/Responsive/media'
 const HeroWrap = styled.section`
     display: grid;
     grid-area: 1/1;
-    height: 100%;
+    height: 240px;
     margin: 0;
     /* margin-top: 50px; */
     width: 100%;
 
     ${media.tablet`
-        height: 270px;
+        height: 540px;
     `};
     ${media.tabletLG`
-        height: 360px;
+        height: 720px;
+    `};
+    ${media.laptopSM`
+        height: 100vh;
     `};
     ${media.desktop`
-        height: 420px;
+        height: 100vh;
     `};
 
 `

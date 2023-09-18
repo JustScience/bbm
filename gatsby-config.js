@@ -1,16 +1,10 @@
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-
-const {
-  NODE_ENV,
-  URL: CLOUD_SITE_URL = 'https://badbubblemusic.com',
-  DEPLOY_PRIME_URL: CLOUD_DEPLOY_URL = CLOUD_SITE_URL,
-  CONTEXT: CLOUD_ENV = NODE_ENV
-} = process.env;
-
-const isCloudProduction = CLOUD_ENV === 'production';
-const siteUrl = isCloudProduction ? CLOUD_SITE_URL : CLOUD_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
@@ -18,7 +12,7 @@ module.exports = {
     titleTemplate: ' | Bad Bubble Music',
     description: "Bad Bubble Music.",
     keywords: "Bad Bubble Music",
-    copyright: "Copyright 2021, Bad Bubble Music, LLC. All rights reserved.",
+    copyright: "Copyright 2022, Bad Bubble Publishing, LLC. All rights reserved.",
     author: "J Galenti",
     contact: "BadBubbleMusic@gmail.com",
     siteUrl: "https://badbubblemusic.com", // No trailing slash allowed!
@@ -26,56 +20,65 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-source-shopify",
+      resolve: 'gatsby-source-shopify',
       options: {
-        storeUrl: process.env.SHOPIFY_STORE_URL,
-        // shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
-        password: process.env.SHOPIFY_ADMIN_PASSWORD,
-        // accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
-        shopifyConnections: ["collections"],
-      },
-    },
-    "gatsby-optional-chaining",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+        shopName: process.env.GATSBY_SHOPIFY_STORE_NAME,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+        password: process.env.GATSBY_SHOPIFY_SHOP_PASSWORD,
+        accessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+        downloadImages: true
+      }
+    }, 
+    "gatsby-plugin-image", 
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [360, 750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {}
+        }
+      }
+    },   
+    "gatsby-transformer-sharp", 
+    "gatsby-plugin-styled-components",  
+    {
+      resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingId: process.env.GA_TRACKING_ID,
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    "gatsby-plugin-sitemap", 
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+        "icon": "src/images/icon.png"
+      }
+    }, 
+    "gatsby-plugin-mdx", 
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        "name": "images",
+        "path": "./src/images/"
       },
-      __key: "images",
-    },
+      __key: "images"
+    }, 
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        "name": "pages",
+        "path": "./src/pages/"
       },
-      __key: "pages",
-    },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `./src/pages/shop/`,
-      },
-    },
-  ],
+      __key: "pages"
+    }
+  ]
 };

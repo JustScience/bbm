@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const FooterWrap = styled.footer`
-    background-color: black;
+    /* background-color: black; */
     color: rgba(255,255,255,0.3);
     font-size: 0.75em;
     font-weight: 300;

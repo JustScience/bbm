@@ -28,23 +28,30 @@ const LogoWrap = styled.div`
     justify-content: flex-start;
 `
 const LogoIcon = styled.div`
-    color: ${color.grey.offWhite};
-    font-size: 2.1em;
+    color: ${color.accent.base};
+    font-size: 1.5em;
     font-weight: 700;
     margin-right: 10px;
     text-shadow: 0 1px 3px ${color.shadow.light};
     transition: 333ms ease-in;
 
-    img {height:100%;width:100%;}
+    img {
+        /* height:100%; */
+        height: 28px;
+        margin-bottom: -4px;
+        width: 24px;
+    }
     /* &:hover {
         color: ${color.accent.base};
     } */
 `
 const LogoText = styled.span`
-    color: ${color.grey.offWhite};
+    color: ${color.accent.base};
     display: none;
-    font-size: 1em;
+    font-family: 'sheila';
+    font-size: 1.2em;
     line-height: 100%;
+    margin-top: 10px;
     visibility: hidden;
 
     ${media.tablet`

@@ -1,10 +1,12 @@
 const color = {
     primary: {
-        base: "darkslateblue",
-        light: "slateblue",
+        bright: '#9d66d8',
+        base: "#471f69",
+        light: "#5f3888",
+        dark: "rgb(16, 0, 27)"
     },
     accent: {
-        base: "#bada55",
+        base: "#f2d948",
     },
     grey: {
         offWhite: "#f3f3f3",

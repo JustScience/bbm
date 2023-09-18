@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import media from '../../0-theme/Responsive/media'
 
-const GalleryWrap = styled.section`
+const GalleryWrap = styled.ul`
     display: grid;
     gap: 12px;
     grid-template-columns: 1fr;

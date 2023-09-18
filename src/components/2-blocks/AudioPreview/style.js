@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import AudioPlayer from 'react-h5-audio-player'
+import color from '../../0-theme/Color'
 
 const AudioPreviewWrap = styled(AudioPlayer)`
     background-color: transparent;
@@ -16,7 +17,7 @@ const AudioPreviewWrap = styled(AudioPlayer)`
     }
     .rhap_current-time,
     .rhap_total-time {
-        color: slateblue;
+        color: ${color.primary.bright};
         font-size: 0.75em;
     }
     .rhap_current-time {
@@ -30,7 +31,7 @@ const AudioPreviewWrap = styled(AudioPlayer)`
         flex: 0;
     }
     .rhap_main-controls-button {
-        color: orange;
+        color: ${color.accent.base};
         margin: 0;
     }
     .rhap_volume-controls {
@@ -38,7 +39,7 @@ const AudioPreviewWrap = styled(AudioPlayer)`
         margin-left: 8px;
     }
     .rhap_volume-button {
-        color: slateblue;
+        color: ${color.primary.bright};
         display: block;
         margin-right: 6px;
     }
@@ -46,10 +47,10 @@ const AudioPreviewWrap = styled(AudioPlayer)`
         width: 24px;
     }
     .rhap_volume-bar{
-        background-color: darkslateblue;
+        background-color: ${color.primary.bright};
     }
     .rhap_volume-indicator {
-        background-color: orange;
+        background-color: ${color.accent.base};
         height: 8px;
         width: 8px;
         top: -2px;
@@ -63,10 +64,10 @@ const AudioPreviewWrap = styled(AudioPlayer)`
         display:none;
     }
     .rhap_progress-bar {background-color: rgba(255,255,255,0.15)}
-    .rhap_progress-filled {background-color:orange;}
-    .rhap_download-progress {background-color: darkslateblue;}
+    .rhap_progress-filled {background-color:${color.accent.base};}
+    .rhap_download-progress {background-color: ${color.primary.bright};}
     .rhap_progress-indicator {
-        background-color: orange;
+        background-color: ${color.accent.base};
         height: 12px;
         width: 12px;
         margin-left: -2px;
