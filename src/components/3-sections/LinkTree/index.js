@@ -30,7 +30,7 @@ export default function LinkTree() {
                 </LinkCard>
                 <LinkCard to="https://www.youtube.com/channel/UC_tWDI35xHKnWYmhw2vN8WQ">
                     <Icon shape="youtube" color="#FF0000" size="48px" />
-                    <span>Subscribe on YouTube</span>
+                    <span>Watch on YouTube</span>
                 </LinkCard>
             </Gallery>
         </Contain>

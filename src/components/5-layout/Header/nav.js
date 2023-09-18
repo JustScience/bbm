@@ -13,8 +13,8 @@ export default function HeaderNav() {
     return (
         <>
             <NavWrap>
-                {/* <NavItem to="/shop" activeStyle={activeStyle}>Shop</NavItem> */}
-                <NavItem to="/linktree" activeStyle={activeStyle}>Links</NavItem>
+                <NavItem to="https://badbubblemusic.myshopify.com" activeStyle={activeStyle}>Shop</NavItem>
+                {/* <NavItem to="/linktree" activeStyle={activeStyle}>Links</NavItem> */}
                 {/* <NavItem to="/video" activeStyle={activeStyle}>Videos</NavItem> */}
                 {/* <NavItem to="/free" activeStyle={activeStyle}>Freebies</NavItem> */}
                 {/* <NavItem to="/contact" activeStyle={activeStyle}>Contact</NavItem> */}

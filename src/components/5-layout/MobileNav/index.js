@@ -30,10 +30,10 @@ export default function MobileNav() {
             </MobileNavHeaderWrap>
             {!!showMenu && 
                 <MobileNavWrap>
-                    {/* <MobileNavItem to="/shop" activeStyle={activeStyle}>Shop</MobileNavItem> */}
+                    <MobileNavItem to="https://badbubblemusic.myshopify.com" activeStyle={activeStyle}>Shop</MobileNavItem>
                     {/* <MobileNavItem to="/free" activeStyle={activeStyle}>Freebies</MobileNavItem> */}
                     {/* <MobileNavItem to="/video" activeStyle={activeStyle}>Videos</MobileNavItem> */}
-                    <MobileNavItem to="/linktree" activeStyle={activeStyle}>Links</MobileNavItem>
+                    {/* <MobileNavItem to="/linktree" activeStyle={activeStyle}>Links</MobileNavItem> */}
                     {/* <MobileNavItem to="/contact" activeStyle={activeStyle}>Contact</MobileNavItem> */}
                 </MobileNavWrap>
             }
