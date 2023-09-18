@@ -16,7 +16,7 @@ const LinkCardWrap = styled(GatsbyLink)`
     span {margin-top: 8px;}
 
     &:hover {
-        background-color: rgba(255,255,255,0.3);
+        background-color: rgba(255,255,255,0.2);
     }
 `
 

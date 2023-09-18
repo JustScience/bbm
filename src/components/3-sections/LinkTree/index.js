@@ -26,11 +26,23 @@ export default function LinkTree() {
                 </LinkCard>
                 <LinkCard to="https://www.twitch.tv/badbubblemusic">
                     <Icon shape="twitch" color="#6441a5" size="48px" />
-                    <span>Follow on Twitch</span>
+                    <span>Watch on Twitch</span>
                 </LinkCard>
                 <LinkCard to="https://www.youtube.com/channel/UC_tWDI35xHKnWYmhw2vN8WQ">
                     <Icon shape="youtube" color="#FF0000" size="48px" />
                     <span>Watch on YouTube</span>
+                </LinkCard>
+                <LinkCard to="https://audius.co/badbubblemusic">
+                    <Icon shape="audius" color="#7E1BCC" size="48px" />
+                    <span>Listen on Audius</span>
+                </LinkCard>
+                <LinkCard to="https://www.tiktok.com/@badbubblemusic">
+                    <Icon shape="tiktok" color="#00F2EA" size="48px" />
+                    <span>Watch on TikTok</span>
+                </LinkCard>
+                <LinkCard to="https://soundcloud.com/badbubblemusic">
+                    <Icon shape="soundcloud" color="#FF7700" size="48px" />
+                    <span>Listen on Soundcloud</span>
                 </LinkCard>
             </Gallery>
         </Contain>
