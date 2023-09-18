@@ -23,6 +23,7 @@ const heroLogo = {
   marginRight: "auto",
   marginLeft: "auto",
   maxHeight: 180,
+  textAlign: "center",
 }
 
 const IndexPage = () => {
