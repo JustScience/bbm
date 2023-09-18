@@ -1,7 +1,9 @@
 import * as React from "react"
+import LinkTree from '../components/3-sections/LinkTree'
+import SearchEngine from "../components/0-theme/SEO/SearchEngine"
 
 const pageStyles = {
-  color: "#232129",
+  color: "#f2d948",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
@@ -125,13 +127,17 @@ const links = [
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Bad Bubble Music
-        <br />
-        <span style={headingAccentStyles}>Under Construction</span>
-      </h1>
-    </main>
+    <>
+      <SearchEngine title="Bad Bubble Linktree | Bad Bubble Music" />
+      <main style={pageStyles}>
+        <h1 style={headingStyles}>
+          Bad Bubble Music
+          <br />
+          <span style={headingAccentStyles}>Under Construction</span>
+        </h1>
+        <LinkTree /> 
+      </main>
+    </>
   )
 }
 

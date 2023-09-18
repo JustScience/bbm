@@ -8,8 +8,15 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `bbm`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: "Bad Bubble Music",
+    titleTemplate: ' | Bad Bubble Music',
+    description: "Bad Bubble Music.",
+    keywords: "Bad Bubble Music",
+    copyright: "Copyright 2022, Bad Bubble Publishing, LLC. All rights reserved.",
+    author: "J Galenti",
+    contact: "BadBubbleMusic@gmail.com",
+    siteUrl: "https://badbubblemusic.com", // No trailing slash allowed!
+    twitter: "@badbubblemusic",
   },
   plugins: [{
     resolve: 'gatsby-source-shopify',
