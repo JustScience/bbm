@@ -20,8 +20,6 @@ const headingAccentStyles = {
 }
 const heroLogo = {
   marginTop: 90,
-  marginRight: "auto",
-  marginLeft: "auto",
   maxHeight: 180,
   textAlign: "center",
 }
@@ -31,7 +29,9 @@ const IndexPage = () => {
     <>
       <SearchEngine title="UNDER CONSTRUCTION" />
       <Layout>
-        <img style={heroLogo} src={icon} alt="Bad Bubble BB Icon" />
+        <div style={{marginLeft:"auto", marginRight:"auto", maxWidth: 180}}>
+          <img style={heroLogo} src={icon} alt="Bad Bubble BB Icon" />
+        </div>
         <h1 style={headingStyles}>
           Bad Bubble Music
           <br />
